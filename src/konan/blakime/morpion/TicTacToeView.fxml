@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="konan.blakime.morpion.TicTacToeController">
+    <!-- GridPane pour contenir les cases du jeu -->
+   <GridPane fx:id="gridPane" style="-fx-border-color: black; -fx-border-width: 1px; -fx-hgap: 2px; -fx-vgap: 2px; -fx-background-color: black;">
+	   <columnConstraints>
+	        <ColumnConstraints hgrow="ALWAYS" minWidth="80" />
+	        <ColumnConstraints hgrow="ALWAYS" minWidth="80" />
+	        <ColumnConstraints hgrow="ALWAYS" minWidth="80" />
+	    </columnConstraints>
+	    <rowConstraints>
+	        <RowConstraints vgrow="ALWAYS" minHeight="80" />
+	        <RowConstraints vgrow="ALWAYS" minHeight="80" />
+	        <RowConstraints vgrow="ALWAYS" minHeight="80" />
+	    </rowConstraints>
+	</GridPane>
+
+
+    <!-- Bouton Restart -->
+    <Button fx:id="restartButton" onAction="#handleRestart" text="Restart" style="-fx-font-size: 18;" />
+    
+    <!-- Label pour afficher le message de fin de jeu -->
+    <Label fx:id="endOfGameLabel" style="-fx-font-size: 20;" visible="false" />
+    <!-- Labels pour afficher les informations du jeu -->
+    <HBox alignment="CENTER" spacing="15">
+        <Label fx:id="xCountLabel" text="X: 0" style="-fx-font-size: 18;" />
+        <Label fx:id="oCountLabel" text="O: 0" style="-fx-font-size: 18;" />
+        <Label fx:id="freeCountLabel" text="Libres: 9" style="-fx-font-size: 18;" />
+    </HBox>
+</VBox>
